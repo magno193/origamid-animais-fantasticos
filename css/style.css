@@ -223,11 +223,11 @@ body {
   }
 }
 
-.js .js-tabcontent section {
+.js [data-tab="content"] section {
   display: none;
 }
 
-.js-tabcontent section.ativo {
+.js [data-tab="content"] section.ativo {
   display: block !important;
   animation: show 0.5s forwards;
 }
@@ -243,21 +243,21 @@ body {
   }
 }
 
-.js .js-accordion dt::after {
+.js [data-animation="accordion"] dt::after {
   content: "⬎";
   margin-left: 10px;
 }
 
-.js .js-accordion dt.ativo::after {
+.js [data-animation="accordion"] dt.ativo::after {
   content: "⬏";
   margin-left: 10px;
 }
 
-.js .js-accordion dd {
+.js [data-animation="accordion"] dd {
   display: none;
 }
 
-.js .js-accordion dd.ativo {
+.js [data-animation="accordion"] dd.ativo {
   display: block !important;
   animation: slideDown 0.5s forwards;
 }
@@ -273,12 +273,12 @@ body {
   }
 }
 
-.js .js-scroll {
+.js [data-animation="scroll"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
 }
 
-.js .js-scroll.ativo {
+.js [data-animation="scroll"].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: 0.3s;
