@@ -1,4 +1,5 @@
 import initAccordion from './modules/accordion.js';
+import initAnimateNumbers from './modules/animate-numbers.js';
 import initAnimationScroll from './modules/animation-scroll.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
@@ -15,3 +16,4 @@ initModal();
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
+initAnimateNumbers();

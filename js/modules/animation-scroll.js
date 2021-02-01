@@ -7,7 +7,11 @@ export default function initAnimationScroll() {
       sections.forEach(item => {
         const sectionTop = item.getBoundingClientRect().top;
         const isSectionVisible = (sectionTop - halfWindow) < 0;
-        if (isSectionVisible) item.classList.add('ativo');
+        if (isSectionVisible) {
+          item.classList.add('ativo');
+        } else if (item.classList.contains('ativo')) {
+          item.classList.remove('ativo');
+        }
       })
     };
     animateScroll();
