@@ -2,7 +2,6 @@ export default function initOperation() {
   const operation = document.querySelector('[data-week]');
   const dayWeek = operation.dataset.week.split(',').map(Number);
   const hourWeek = operation.dataset.hour.split(',').map(Number);
-  console.log(dayWeek, hourWeek);
 
   const dataNow = new Date();
   const dayNow = dataNow.getDay();
