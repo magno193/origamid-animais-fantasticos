@@ -1,8 +1,8 @@
 export default function initAnimateNumbers() {
   function animateNumbers() {
-    const numbers = document.querySelectorAll('[data-number]')
+    const numbers = document.querySelectorAll('[data-number]');
 
-    numbers.forEach(number => {
+    numbers.forEach((number) => {
       const total = +number.innerText;
       const increment = Math.floor(total / 100);
 
@@ -18,15 +18,15 @@ export default function initAnimateNumbers() {
     });
   }
 
+  const observerTarget = document.querySelector('.numbers');
+  let observer;
   function handleMutation(mutation) {
     if (mutation[0].target.classList.contains('ativo')) {
       observer.disconnect();
       animateNumbers();
     }
   }
+  observer = new MutationObserver(handleMutation);
 
-  const observerTarget = document.querySelector('.numbers');
-  const observer = new MutationObserver(handleMutation);
-
-  observer.observe(observerTarget, { attributes: true })
-};
+  observer.observe(observerTarget, { attributes: true });
+}

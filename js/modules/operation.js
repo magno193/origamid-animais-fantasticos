@@ -15,4 +15,4 @@ export default function initOperation() {
   } else {
     operation.classList.remove('open');
   }
-};
+}
