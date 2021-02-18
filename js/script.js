@@ -7,11 +7,13 @@ import initFetchBitcoin from './modules/fetch-bitcoin.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initModal from './modules/modal.js';
 import initOperation from './modules/operation.js';
-import initSmoothScroll from './modules/smooth-scroll.js';
+import SmoothScroll from './modules/smooth-scroll.js';
 import initTabNav from './modules/tabnav.js';
 import initTooltip from './modules/tooltip.js';
 
-initSmoothScroll();
+const smoothScroll = new SmoothScroll('[data-menu="suave"] a[hre^="#"]');
+smoothScroll.init();
+
 initAnimationScroll();
 initAccordion();
 initTabNav();
