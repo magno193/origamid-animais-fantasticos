@@ -1,7 +1,7 @@
 export default class SmoothScroll {
   constructor(links, options) {
     this.internalLinks = document.querySelectorAll(links);
-    if (options === 'undefined') {
+    if (!options) {
       this.options = {
         behavior: 'smooth',
         block: 'start',
@@ -21,7 +21,7 @@ export default class SmoothScroll {
 
   addLinkEvent() {
     this.internalLinks.forEach((item) => {
-      item.addEventListener('click', this.scrollToSection);
+      item.addEventListener('click', (e) => this.scrollToSection(e));
     });
   }
 
