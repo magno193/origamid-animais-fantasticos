@@ -1,12 +1,13 @@
 export default class Accordion {
   constructor(list) {
     this.accordionList = document.querySelectorAll(list);
-    this.activeClass = 'active';
+    this.activeClass = 'ativo';
   }
 
   // Toggle the 'active' class
   toggleAccordion(item) {
-    item.toggle(this.activeClass);
+    console.log(item);
+    item.classList.toggle(this.activeClass);
     item.nextElementSibling.classList.toggle(this.activeClass);
   }
 

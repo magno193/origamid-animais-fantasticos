@@ -1,4 +1,5 @@
 import Accordion from './modules/accordion.js';
+import TabNavigation from './modules/tabnav.js';
 import initAnimateNumbers from './modules/animate-numbers.js';
 import initAnimationScroll from './modules/animation-scroll.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
@@ -8,7 +9,6 @@ import initMenuMobile from './modules/menu-mobile.js';
 import initModal from './modules/modal.js';
 import initOperation from './modules/operation.js';
 import SmoothScroll from './modules/smooth-scroll.js';
-import initTabNav from './modules/tabnav.js';
 import initTooltip from './modules/tooltip.js';
 
 const smoothScroll = new SmoothScroll('[data-menu="suave"] a[hre^="#"]');
@@ -18,7 +18,10 @@ const accordionList = new Accordion('[data-animation="accordion"] dt');
 accordionList.init();
 
 initAnimationScroll();
-initTabNav();
+const tabNavigation = new TabNavigation(
+  '[data-tab="menu"] li', '[data-tab="content"] section',
+);
+tabNavigation.init();
 initModal();
 initTooltip();
 initDropdownMenu();
