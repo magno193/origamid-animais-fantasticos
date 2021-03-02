@@ -9,7 +9,7 @@ import initMenuMobile from './modules/menu-mobile.js';
 import Modal from './modules/modal.js';
 import initOperation from './modules/operation.js';
 import SmoothScroll from './modules/smooth-scroll.js';
-import initTooltip from './modules/tooltip.js';
+import ToolTip from './modules/tooltip.js';
 
 const smoothScroll = new SmoothScroll('[data-menu="suave"] a[href^="#"]');
 smoothScroll.init();
@@ -27,7 +27,10 @@ const modal = new Modal(
   '[data-modal="open"]', '[data-modal="close"]', '[data-modal="container"]',
 );
 modal.init();
-initTooltip();
+
+const toolTip = new ToolTip('[data-tooltip]');
+toolTip.init();
+
 initDropdownMenu();
 initMenuMobile();
 initAnimateNumbers();
