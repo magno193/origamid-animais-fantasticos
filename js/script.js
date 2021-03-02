@@ -1,6 +1,5 @@
 import Accordion from './modules/accordion.js';
 import TabNavigation from './modules/tabnav.js';
-import initAnimateNumbers from './modules/animate-numbers.js';
 import initAnimationScroll from './modules/animation-scroll.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initFetchAnimals from './modules/fetch-animals.js';
@@ -33,7 +32,6 @@ toolTip.init();
 
 initDropdownMenu();
 initMenuMobile();
-initAnimateNumbers();
 initOperation();
 initFetchAnimals();
 initFetchBitcoin();
