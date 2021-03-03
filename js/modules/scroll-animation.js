@@ -1,10 +1,12 @@
+import debounce from './debounce.js';
+
 export default class ScrollAnimation {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.halfWindow = window.innerHeight * 0.6;
 
     // binding
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 50);
   }
 
   // get the distance of eacth item in relation of the t site's top
