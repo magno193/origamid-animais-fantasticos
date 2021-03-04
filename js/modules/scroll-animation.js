@@ -31,6 +31,11 @@ export default class ScrollAnimation {
     });
   }
 
+  // Remove scroll event
+  stop() {
+    window.removeEventListener('scroll', this.checkDistance);
+  }
+
   init() {
     if (this.sections.length) {
       this.getDistance();
@@ -39,10 +44,5 @@ export default class ScrollAnimation {
     }
 
     return this;
-  }
-
-  // Remove scroll event
-  stop() {
-    window.removeEventListener('scroll', this.checkDistance);
   }
 }

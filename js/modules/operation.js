@@ -35,5 +35,6 @@ export default class Operation {
       this.dataNow();
       this.activatesOpen();
     }
+    return this;
   }
 }

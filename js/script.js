@@ -41,5 +41,5 @@ menuMobile.init();
 const operation = new Operation('[data-week]', 'open');
 operation.init();
 
-fetchAnimals('../mock/animalsapi.json', '.numbers-grid');
+fetchAnimals('./mock/animalsapi.json', '.numbers-grid');
 fetchBitCoin('https://blockchain.info/ticker', '.btc-price');
