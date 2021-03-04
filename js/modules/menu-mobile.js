@@ -28,7 +28,6 @@ export default class MenuMobile {
     if (this.menuButton && this.menuList) {
       this.addMenuEvents();
     }
-    console.log(this.menuButton, this.menuList);
     return this;
   }
 }

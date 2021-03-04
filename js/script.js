@@ -3,7 +3,7 @@ import TabNavigation from './modules/tabnav.js';
 import ScrollAnimation from './modules/scroll-animation.js';
 import fetchBitCoin from './modules/fetch-bitcoin.js';
 import Modal from './modules/modal.js';
-import initOperation from './modules/operation.js';
+import Operation from './modules/operation.js';
 import SmoothScroll from './modules/smooth-scroll.js';
 import ToolTip from './modules/tooltip.js';
 import fetchAnimals from './modules/fetch-animals.js';
@@ -38,6 +38,8 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initOperation();
+const operation = new Operation('[data-week]', 'open');
+operation.init();
+
 fetchAnimals('../mock/animalsapi.json', '.numbers-grid');
 fetchBitCoin('https://blockchain.info/ticker', '.btc-price');
